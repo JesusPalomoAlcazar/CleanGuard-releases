@@ -1,7 +1,8 @@
 # CleanGuard
 
 Utilidad de mantenimiento para Windows 11: limpieza de archivos temporales y cachés, gestor de programas
-de inicio y limpiador del registro con copia de seguridad previa.
+de inicio, limpiador del registro con copia de seguridad previa e instalación de actualizaciones de Windows y de
+programas (con winget).
 
 Desarrollado por [Jesús Palomo](https://jesuspalomoalcazar.github.io/).
 
@@ -48,8 +49,8 @@ La única manera de usar CleanGuard es desactivarlo:
 ## Permisos de administrador
 
 Al abrirse, CleanGuard pide permisos de administrador. Son necesarios para limpiar carpetas del sistema
-(como `C:\Windows\Temp` o los restos de Windows Update), gestionar los programas de inicio de todo el equipo y
-reparar el registro.
+(como `C:\Windows\Temp` o los restos de Windows Update), gestionar los programas de inicio de todo el equipo,
+reparar el registro e instalar actualizaciones.
 
 ## Seguridad
 
@@ -59,4 +60,6 @@ reparar el registro.
 - Los programas de inicio se deshabilitan sin borrarlos; se pueden volver a habilitar.
 - Antes de reparar el registro se guarda una copia `.reg` de cada clave afectada. Si la copia falla, no se modifica
   nada. La última reparación se puede deshacer con doble clic en el indicador **MODO SEGURO**.
+- En **Actualizaciones**, buscar no instala nada: tú marcas qué actualizaciones de Windows y qué programas se
+  instalan. Si Windows necesita reiniciar, CleanGuard te lo pregunta antes.
 - Todo queda registrado en `%LocalAppData%\CleanGuard\logs`.
